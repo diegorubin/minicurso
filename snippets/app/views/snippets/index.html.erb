@@ -1,0 +1,24 @@
+<h2> Lista de Snippets - Feito em aula </h2>
+
+<p>
+  <%= link_to "Novo Snippet", new_snippet_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Linguagem</th>
+    <th></th>
+  </tr>
+
+  <% @snippets.each do |s| %>
+    <tr>
+      <td><%= s.title %></td>
+      <td><%= s.language %></td>
+      <td><%= link_to "Exibir", snippet_path(s) %></td>
+      <td><%= link_to "Editar", edit_snippet_path(s) %></td>
+      <td><%= link_to "Remover", snippet_path(s), :method => :delete, :confirm => "Você tem certeza disso?" %></td>
+    </tr>
+  <% end %>
+
+</table>

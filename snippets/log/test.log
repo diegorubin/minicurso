@@ -1,0 +1,638 @@
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (254.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (180.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateSnippets (20110902120351)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "snippets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "code" text, "language" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110902120351')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("snippets")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "code", "language", "title", "created_at") VALUES ('2011-09-02 12:20:13.124419', NULL, NULL, NULL, '2011-09-02 12:20:13.124419')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("created_at", "updated_at", "language", "title", "code") VALUES ('2011-09-02 12:22:19.946707', '2011-09-02 12:22:19.946707', NULL, NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("created_at", "updated_at", "language", "title", "code") VALUES ('2011-09-02 12:22:19.965981', '2011-09-02 12:22:19.965981', NULL, NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "snippets" ("title", "language", "updated_at", "created_at", "code") VALUES (NULL, NULL, '2011-09-02 12:22:21.922692', '2011-09-02 12:22:21.922692', NULL)
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "snippets" ("title", "language", "updated_at", "created_at", "code") VALUES (NULL, NULL, '2011-09-02 12:22:21.942646', '2011-09-02 12:22:21.942646', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "title", "code", "language", "created_at") VALUES ('2011-09-02 12:22:23.917623', NULL, NULL, NULL, '2011-09-02 12:22:23.917623')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "title", "code", "language", "created_at") VALUES ('2011-09-02 12:22:23.936861', NULL, NULL, NULL, '2011-09-02 12:22:23.936861')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "language", "title", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:22:25.916581', '2011-09-02 12:22:25.916581')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "language", "title", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:22:25.935887', '2011-09-02 12:22:25.935887')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "code", "title", "created_at") VALUES (NULL, '2011-09-02 12:22:27.888067', NULL, NULL, '2011-09-02 12:22:27.888067')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "code", "title", "created_at") VALUES (NULL, '2011-09-02 12:22:27.907167', NULL, NULL, '2011-09-02 12:22:27.907167')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("created_at", "updated_at", "code", "title", "language") VALUES ('2011-09-02 12:22:29.860300', '2011-09-02 12:22:29.860300', NULL, NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("created_at", "updated_at", "code", "title", "language") VALUES ('2011-09-02 12:22:29.879437', '2011-09-02 12:22:29.879437', NULL, NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("created_at", "updated_at", "title", "language", "code") VALUES ('2011-09-02 12:22:31.838095', '2011-09-02 12:22:31.838095', NULL, NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("created_at", "updated_at", "title", "language", "code") VALUES ('2011-09-02 12:22:31.857400', '2011-09-02 12:22:31.857400', NULL, NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "created_at", "updated_at", "code", "language") VALUES (NULL, '2011-09-02 12:22:33.821522', '2011-09-02 12:22:33.821522', NULL, NULL)
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "snippets" ("title", "created_at", "updated_at", "code", "language") VALUES (NULL, '2011-09-02 12:22:33.840837', '2011-09-02 12:22:33.840837', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "code", "created_at", "updated_at", "language") VALUES (NULL, NULL, '2011-09-02 12:22:35.803532', '2011-09-02 12:22:35.803532', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "code", "created_at", "updated_at", "language") VALUES (NULL, NULL, '2011-09-02 12:22:35.822708', '2011-09-02 12:22:35.822708', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "code", "created_at", "language", "title") VALUES ('2011-09-02 12:22:37.802694', NULL, '2011-09-02 12:22:37.802694', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "code", "created_at", "language", "title") VALUES ('2011-09-02 12:22:37.822027', NULL, '2011-09-02 12:22:37.822027', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "snippets" ("title", "code", "language", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:22:39.826027', '2011-09-02 12:22:39.826027')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "code", "language", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:22:39.846463', '2011-09-02 12:22:39.846463')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "title", "created_at", "updated_at", "language") VALUES (NULL, NULL, '2011-09-02 12:22:41.858463', '2011-09-02 12:22:41.858463', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "title", "created_at", "updated_at", "language") VALUES (NULL, NULL, '2011-09-02 12:22:41.878118', '2011-09-02 12:22:41.878118', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "title", "code", "created_at", "language") VALUES ('2011-09-02 12:22:43.895289', NULL, NULL, '2011-09-02 12:22:43.895289', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "title", "code", "created_at", "language") VALUES ('2011-09-02 12:22:43.914925', NULL, NULL, '2011-09-02 12:22:43.914925', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("created_at", "language", "code", "updated_at", "title") VALUES ('2011-09-02 12:22:45.879630', NULL, NULL, '2011-09-02 12:22:45.879630', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("created_at", "language", "code", "updated_at", "title") VALUES ('2011-09-02 12:22:45.898746', NULL, NULL, '2011-09-02 12:22:45.898746', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "created_at", "language", "code", "title") VALUES ('2011-09-02 12:22:47.851217', '2011-09-02 12:22:47.851217', NULL, NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "created_at", "language", "code", "title") VALUES ('2011-09-02 12:22:47.870230', '2011-09-02 12:22:47.870230', NULL, NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "code", "created_at", "language", "title") VALUES ('2011-09-02 12:22:49.819736', NULL, '2011-09-02 12:22:49.819736', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "code", "created_at", "language", "title") VALUES ('2011-09-02 12:22:49.838734', NULL, '2011-09-02 12:22:49.838734', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "title", "updated_at", "created_at", "code") VALUES (NULL, NULL, '2011-09-02 12:22:51.793874', '2011-09-02 12:22:51.793874', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "title", "updated_at", "created_at", "code") VALUES (NULL, NULL, '2011-09-02 12:22:51.813132', '2011-09-02 12:22:51.813132', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("created_at", "language", "title", "updated_at", "code") VALUES ('2011-09-02 12:22:53.763128', NULL, NULL, '2011-09-02 12:22:53.763128', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("created_at", "language", "title", "updated_at", "code") VALUES ('2011-09-02 12:22:53.782210', NULL, NULL, '2011-09-02 12:22:53.782210', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "updated_at", "language", "created_at", "title") VALUES (NULL, '2011-09-02 12:22:55.740705', NULL, '2011-09-02 12:22:55.740705', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "updated_at", "language", "created_at", "title") VALUES (NULL, '2011-09-02 12:22:55.759686', NULL, '2011-09-02 12:22:55.759686', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "snippets" ("updated_at", "language", "code", "title", "created_at") VALUES ('2011-09-02 12:22:57.739352', NULL, NULL, NULL, '2011-09-02 12:22:57.739352')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "language", "code", "title", "created_at") VALUES ('2011-09-02 12:22:57.758459', NULL, NULL, NULL, '2011-09-02 12:22:57.758459')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "title", "created_at", "code") VALUES (NULL, '2011-09-02 12:22:59.734288', NULL, '2011-09-02 12:22:59.734288', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "title", "created_at", "code") VALUES (NULL, '2011-09-02 12:22:59.753377', NULL, '2011-09-02 12:22:59.753377', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "code", "language", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:23:01.726447', '2011-09-02 12:23:01.726447')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "code", "language", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:23:01.745509', '2011-09-02 12:23:01.745509')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "created_at", "code", "language", "updated_at") VALUES (NULL, '2011-09-02 12:23:03.707284', NULL, NULL, '2011-09-02 12:23:03.707284')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "snippets" ("title", "created_at", "code", "language", "updated_at") VALUES (NULL, '2011-09-02 12:23:03.726662', NULL, NULL, '2011-09-02 12:23:03.726662')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "language", "created_at", "updated_at", "code") VALUES (NULL, NULL, '2011-09-02 12:23:05.707718', '2011-09-02 12:23:05.707718', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "language", "created_at", "updated_at", "code") VALUES (NULL, NULL, '2011-09-02 12:23:05.727215', '2011-09-02 12:23:05.727215', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "code", "title", "created_at") VALUES (NULL, '2011-09-02 12:23:07.705592', NULL, NULL, '2011-09-02 12:23:07.705592')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "code", "title", "created_at") VALUES (NULL, '2011-09-02 12:23:07.724809', NULL, NULL, '2011-09-02 12:23:07.724809')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("created_at", "language", "title", "code", "updated_at") VALUES ('2011-09-02 12:23:09.727140', NULL, NULL, NULL, '2011-09-02 12:23:09.727140')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("created_at", "language", "title", "code", "updated_at") VALUES ('2011-09-02 12:23:09.746541', NULL, NULL, NULL, '2011-09-02 12:23:09.746541')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "created_at", "title", "updated_at", "code") VALUES (NULL, '2011-09-02 12:23:11.696791', NULL, '2011-09-02 12:23:11.696791', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "created_at", "title", "updated_at", "code") VALUES (NULL, '2011-09-02 12:23:11.715830', NULL, '2011-09-02 12:23:11.715830', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "title", "language", "code", "created_at") VALUES ('2011-09-02 12:23:13.684311', NULL, NULL, NULL, '2011-09-02 12:23:13.684311')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "title", "language", "code", "created_at") VALUES ('2011-09-02 12:23:13.703534', NULL, NULL, NULL, '2011-09-02 12:23:13.703534')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "title", "code", "created_at", "updated_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:23:15.665041', '2011-09-02 12:23:15.665041')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "title", "code", "created_at", "updated_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:23:15.684316', '2011-09-02 12:23:15.684316')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "title", "language", "code", "created_at") VALUES ('2011-09-02 12:23:17.639984', NULL, NULL, NULL, '2011-09-02 12:23:17.639984')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "title", "language", "code", "created_at") VALUES ('2011-09-02 12:23:17.658950', NULL, NULL, NULL, '2011-09-02 12:23:17.658950')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "code", "created_at", "language", "title") VALUES ('2011-09-02 12:23:19.625331', NULL, '2011-09-02 12:23:19.625331', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "code", "created_at", "language", "title") VALUES ('2011-09-02 12:23:19.644420', NULL, '2011-09-02 12:23:19.644420', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "code", "created_at", "title") VALUES (NULL, '2011-09-02 12:23:21.612998', NULL, '2011-09-02 12:23:21.612998', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "code", "created_at", "title") VALUES (NULL, '2011-09-02 12:23:21.632239', NULL, '2011-09-02 12:23:21.632239', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "snippets" ("code", "title", "created_at", "updated_at", "language") VALUES (NULL, NULL, '2011-09-02 12:23:23.586202', '2011-09-02 12:23:23.586202', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "title", "created_at", "updated_at", "language") VALUES (NULL, NULL, '2011-09-02 12:23:23.605408', '2011-09-02 12:23:23.605408', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "updated_at", "language", "created_at", "code") VALUES (NULL, '2011-09-02 12:23:25.543874', NULL, '2011-09-02 12:23:25.543874', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "updated_at", "language", "created_at", "code") VALUES (NULL, '2011-09-02 12:23:25.562881', NULL, '2011-09-02 12:23:25.562881', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "created_at", "language", "title", "code") VALUES ('2011-09-02 12:23:27.544287', '2011-09-02 12:23:27.544287', NULL, NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "created_at", "language", "title", "code") VALUES ('2011-09-02 12:23:27.563852', '2011-09-02 12:23:27.563852', NULL, NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "title", "code", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:23:29.522172', '2011-09-02 12:23:29.522172')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "title", "code", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:23:29.541400', '2011-09-02 12:23:29.541400')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "code", "title", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:23:31.512371', '2011-09-02 12:23:31.512371')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "code", "title", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:23:31.531362', '2011-09-02 12:23:31.531362')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "created_at", "language", "title", "code") VALUES ('2011-09-02 12:23:33.494703', '2011-09-02 12:23:33.494703', NULL, NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "created_at", "language", "title", "code") VALUES ('2011-09-02 12:23:33.514075', '2011-09-02 12:23:33.514075', NULL, NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "updated_at", "code", "created_at", "language") VALUES (NULL, '2011-09-02 12:23:35.458917', NULL, '2011-09-02 12:23:35.458917', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "updated_at", "code", "created_at", "language") VALUES (NULL, '2011-09-02 12:23:35.477997', NULL, '2011-09-02 12:23:35.477997', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "code", "created_at", "title") VALUES (NULL, '2011-09-02 12:23:37.448939', NULL, '2011-09-02 12:23:37.448939', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "code", "created_at", "title") VALUES (NULL, '2011-09-02 12:23:37.468039', NULL, '2011-09-02 12:23:37.468039', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("created_at", "language", "title", "updated_at", "code") VALUES ('2011-09-02 12:23:39.447440', NULL, NULL, '2011-09-02 12:23:39.447440', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("created_at", "language", "title", "updated_at", "code") VALUES ('2011-09-02 12:23:39.466611', NULL, NULL, '2011-09-02 12:23:39.466611', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "code", "created_at", "language", "title") VALUES ('2011-09-02 12:23:41.464495', NULL, '2011-09-02 12:23:41.464495', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "code", "created_at", "language", "title") VALUES ('2011-09-02 12:23:41.483676', NULL, '2011-09-02 12:23:41.483676', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "language", "created_at", "title", "updated_at") VALUES (NULL, NULL, '2011-09-02 12:23:43.456262', NULL, '2011-09-02 12:23:43.456262')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "language", "created_at", "title", "updated_at") VALUES (NULL, NULL, '2011-09-02 12:23:43.480648', NULL, '2011-09-02 12:23:43.480648')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "code", "updated_at", "created_at", "title") VALUES (NULL, NULL, '2011-09-02 12:23:45.437683', '2011-09-02 12:23:45.437683', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "code", "updated_at", "created_at", "title") VALUES (NULL, NULL, '2011-09-02 12:23:45.457042', '2011-09-02 12:23:45.457042', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "title", "code", "created_at", "language") VALUES ('2011-09-02 12:23:47.419250', NULL, NULL, '2011-09-02 12:23:47.419250', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "title", "code", "created_at", "language") VALUES ('2011-09-02 12:23:47.438489', NULL, NULL, '2011-09-02 12:23:47.438489', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "created_at", "language", "code", "updated_at") VALUES (NULL, '2011-09-02 12:23:49.413917', NULL, NULL, '2011-09-02 12:23:49.413917')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "created_at", "language", "code", "updated_at") VALUES (NULL, '2011-09-02 12:23:49.433193', NULL, NULL, '2011-09-02 12:23:49.433193')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "title", "code", "created_at", "updated_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:23:51.384155', '2011-09-02 12:23:51.384155')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "title", "code", "created_at", "updated_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:23:51.403130', '2011-09-02 12:23:51.403130')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "created_at", "language", "updated_at", "code") VALUES (NULL, '2011-09-02 12:23:53.370106', NULL, '2011-09-02 12:23:53.370106', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "created_at", "language", "updated_at", "code") VALUES (NULL, '2011-09-02 12:23:53.389235', NULL, '2011-09-02 12:23:53.389235', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "code", "created_at", "title", "language") VALUES ('2011-09-02 12:23:55.340699', NULL, '2011-09-02 12:23:55.340699', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "code", "created_at", "title", "language") VALUES ('2011-09-02 12:23:55.359608', NULL, '2011-09-02 12:23:55.359608', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "updated_at", "created_at", "language", "code") VALUES (NULL, '2011-09-02 12:23:57.326350', '2011-09-02 12:23:57.326350', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "updated_at", "created_at", "language", "code") VALUES (NULL, '2011-09-02 12:23:57.345434', '2011-09-02 12:23:57.345434', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "snippets" ("created_at", "updated_at", "title", "language", "code") VALUES ('2011-09-02 12:23:59.320942', '2011-09-02 12:23:59.320942', NULL, NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("created_at", "updated_at", "title", "language", "code") VALUES ('2011-09-02 12:23:59.340605', '2011-09-02 12:23:59.340605', NULL, NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "title", "code", "created_at", "language") VALUES ('2011-09-02 12:24:01.309761', NULL, NULL, '2011-09-02 12:24:01.309761', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "title", "code", "created_at", "language") VALUES ('2011-09-02 12:24:01.329083', NULL, NULL, '2011-09-02 12:24:01.329083', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "updated_at", "language", "title", "created_at") VALUES (NULL, '2011-09-02 12:24:03.292488', NULL, NULL, '2011-09-02 12:24:03.292488')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "updated_at", "language", "title", "created_at") VALUES (NULL, '2011-09-02 12:24:03.311564', NULL, NULL, '2011-09-02 12:24:03.311564')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "snippets" ("code", "updated_at", "created_at", "title", "language") VALUES (NULL, '2011-09-02 12:24:05.268241', '2011-09-02 12:24:05.268241', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "updated_at", "created_at", "title", "language") VALUES (NULL, '2011-09-02 12:24:05.287391', '2011-09-02 12:24:05.287391', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "language", "updated_at", "code", "created_at") VALUES (NULL, NULL, '2011-09-02 12:24:07.274676', NULL, '2011-09-02 12:24:07.274676')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "language", "updated_at", "code", "created_at") VALUES (NULL, NULL, '2011-09-02 12:24:07.293697', NULL, '2011-09-02 12:24:07.293697')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "code", "created_at", "language", "title") VALUES ('2011-09-02 12:24:09.242751', NULL, '2011-09-02 12:24:09.242751', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "code", "created_at", "language", "title") VALUES ('2011-09-02 12:24:09.261663', NULL, '2011-09-02 12:24:09.261663', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "created_at", "title", "code") VALUES (NULL, '2011-09-02 12:24:11.230503', '2011-09-02 12:24:11.230503', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "created_at", "title", "code") VALUES (NULL, '2011-09-02 12:24:11.249585', '2011-09-02 12:24:11.249585', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("created_at", "language", "code", "updated_at", "title") VALUES ('2011-09-02 12:24:13.199408', NULL, NULL, '2011-09-02 12:24:13.199408', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("created_at", "language", "code", "updated_at", "title") VALUES ('2011-09-02 12:24:13.218723', NULL, NULL, '2011-09-02 12:24:13.218723', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "code", "created_at", "updated_at", "title") VALUES (NULL, NULL, '2011-09-02 12:24:15.180630', '2011-09-02 12:24:15.180630', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "code", "created_at", "updated_at", "title") VALUES (NULL, NULL, '2011-09-02 12:24:15.199886', '2011-09-02 12:24:15.199886', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "language", "updated_at", "created_at", "code") VALUES (NULL, NULL, '2011-09-02 12:24:17.143875', '2011-09-02 12:24:17.143875', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "language", "updated_at", "created_at", "code") VALUES (NULL, NULL, '2011-09-02 12:24:17.162897', '2011-09-02 12:24:17.162897', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "created_at", "language", "code", "updated_at") VALUES (NULL, '2011-09-02 12:24:19.129146', NULL, NULL, '2011-09-02 12:24:19.129146')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "created_at", "language", "code", "updated_at") VALUES (NULL, '2011-09-02 12:24:19.148377', NULL, NULL, '2011-09-02 12:24:19.148377')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "language", "created_at", "updated_at", "code") VALUES (NULL, NULL, '2011-09-02 12:24:21.111487', '2011-09-02 12:24:21.111487', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "language", "created_at", "updated_at", "code") VALUES (NULL, NULL, '2011-09-02 12:24:21.130456', '2011-09-02 12:24:21.130456', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (26.2ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "title", "code", "created_at") VALUES (NULL, '2011-09-02 12:24:23.082076', NULL, NULL, '2011-09-02 12:24:23.082076')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "title", "code", "created_at") VALUES (NULL, '2011-09-02 12:24:23.128654', NULL, NULL, '2011-09-02 12:24:23.128654')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "updated_at", "title", "created_at", "language") VALUES (NULL, '2011-09-02 12:24:25.102672', NULL, '2011-09-02 12:24:25.102672', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "updated_at", "title", "created_at", "language") VALUES (NULL, '2011-09-02 12:24:25.121941', NULL, '2011-09-02 12:24:25.121941', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "created_at", "language", "code", "title") VALUES ('2011-09-02 12:24:27.104076', '2011-09-02 12:24:27.104076', NULL, NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "created_at", "language", "code", "title") VALUES ('2011-09-02 12:24:27.123269', '2011-09-02 12:24:27.123269', NULL, NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (33.1ms)[0m  INSERT INTO "snippets" ("title", "created_at", "code", "language", "updated_at") VALUES (NULL, '2011-09-02 12:24:29.085669', NULL, NULL, '2011-09-02 12:24:29.085669')
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "snippets" ("title", "created_at", "code", "language", "updated_at") VALUES (NULL, '2011-09-02 12:24:29.139038', NULL, NULL, '2011-09-02 12:24:29.139038')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "created_at", "updated_at", "title", "code") VALUES (NULL, '2011-09-02 12:24:31.138097', '2011-09-02 12:24:31.138097', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "created_at", "updated_at", "title", "code") VALUES (NULL, '2011-09-02 12:24:31.157405', '2011-09-02 12:24:31.157405', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "updated_at", "code", "language", "created_at") VALUES (NULL, '2011-09-02 12:24:33.127911', NULL, NULL, '2011-09-02 12:24:33.127911')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "snippets" ("title", "updated_at", "code", "language", "created_at") VALUES (NULL, '2011-09-02 12:24:33.147190', NULL, NULL, '2011-09-02 12:24:33.147190')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (23.8ms)[0m  INSERT INTO "snippets" ("updated_at", "title", "language", "code", "created_at") VALUES ('2011-09-02 12:24:35.106788', NULL, NULL, NULL, '2011-09-02 12:24:35.106788')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "title", "language", "code", "created_at") VALUES ('2011-09-02 12:24:35.151206', NULL, NULL, NULL, '2011-09-02 12:24:35.151206')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "code", "updated_at", "created_at", "title") VALUES (NULL, NULL, '2011-09-02 12:24:37.098470', '2011-09-02 12:24:37.098470', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "code", "updated_at", "created_at", "title") VALUES (NULL, NULL, '2011-09-02 12:24:37.117620', '2011-09-02 12:24:37.117620', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "updated_at", "language", "created_at", "code") VALUES (NULL, '2011-09-02 12:24:39.104687', NULL, '2011-09-02 12:24:39.104687', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "updated_at", "language", "created_at", "code") VALUES (NULL, '2011-09-02 12:24:39.124003', NULL, '2011-09-02 12:24:39.124003', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (27.1ms)[0m  INSERT INTO "snippets" ("title", "code", "updated_at", "created_at", "language") VALUES (NULL, NULL, '2011-09-02 12:24:41.086847', '2011-09-02 12:24:41.086847', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "code", "updated_at", "created_at", "language") VALUES (NULL, NULL, '2011-09-02 12:24:41.133303', '2011-09-02 12:24:41.133303', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "language", "code", "created_at", "title") VALUES ('2011-09-02 12:24:43.093847', NULL, NULL, '2011-09-02 12:24:43.093847', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "language", "code", "created_at", "title") VALUES ('2011-09-02 12:24:43.112839', NULL, NULL, '2011-09-02 12:24:43.112839', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "title", "created_at", "code") VALUES (NULL, '2011-09-02 12:24:45.075007', NULL, '2011-09-02 12:24:45.075007', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "title", "created_at", "code") VALUES (NULL, '2011-09-02 12:24:45.094183', NULL, '2011-09-02 12:24:45.094183', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (27.9ms)[0m  INSERT INTO "snippets" ("title", "code", "updated_at", "language", "created_at") VALUES (NULL, NULL, '2011-09-02 12:24:47.045457', NULL, '2011-09-02 12:24:47.045457')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "code", "updated_at", "language", "created_at") VALUES (NULL, NULL, '2011-09-02 12:24:47.093033', NULL, '2011-09-02 12:24:47.093033')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "created_at", "updated_at", "code", "language") VALUES (NULL, '2011-09-02 12:24:49.044896', '2011-09-02 12:24:49.044896', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "created_at", "updated_at", "code", "language") VALUES (NULL, '2011-09-02 12:24:49.063962', '2011-09-02 12:24:49.063962', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "code", "created_at", "language", "updated_at") VALUES (NULL, NULL, '2011-09-02 12:24:51.034965', NULL, '2011-09-02 12:24:51.034965')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "code", "created_at", "language", "updated_at") VALUES (NULL, NULL, '2011-09-02 12:24:51.054133', NULL, '2011-09-02 12:24:51.054133')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "code", "created_at", "title", "updated_at") VALUES (NULL, NULL, '2011-09-02 12:24:53.016338', NULL, '2011-09-02 12:24:53.016338')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "code", "created_at", "title", "updated_at") VALUES (NULL, NULL, '2011-09-02 12:24:53.035797', NULL, '2011-09-02 12:24:53.035797')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "language", "updated_at", "code", "created_at") VALUES (NULL, NULL, '2011-09-02 12:24:55.012956', NULL, '2011-09-02 12:24:55.012956')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "language", "updated_at", "code", "created_at") VALUES (NULL, NULL, '2011-09-02 12:24:55.032145', NULL, '2011-09-02 12:24:55.032145')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "language", "updated_at", "code", "created_at") VALUES (NULL, NULL, '2011-09-02 12:24:56.981329', NULL, '2011-09-02 12:24:56.981329')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "language", "updated_at", "code", "created_at") VALUES (NULL, NULL, '2011-09-02 12:24:57.000297', NULL, '2011-09-02 12:24:57.000297')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "created_at", "language", "code", "updated_at") VALUES (NULL, '2011-09-02 12:24:58.961984', NULL, NULL, '2011-09-02 12:24:58.961984')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "created_at", "language", "code", "updated_at") VALUES (NULL, '2011-09-02 12:24:58.981263', NULL, NULL, '2011-09-02 12:24:58.981263')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "code", "title", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:25:00.962636', '2011-09-02 12:25:00.962636')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "code", "title", "updated_at", "created_at") VALUES (NULL, NULL, NULL, '2011-09-02 12:25:00.981763', '2011-09-02 12:25:00.981763')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "created_at", "code", "language", "updated_at") VALUES (NULL, '2011-09-02 12:25:02.943405', NULL, NULL, '2011-09-02 12:25:02.943405')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "created_at", "code", "language", "updated_at") VALUES (NULL, '2011-09-02 12:25:02.962733', NULL, NULL, '2011-09-02 12:25:02.962733')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "language", "created_at", "title", "code") VALUES ('2011-09-02 12:25:04.912699', NULL, '2011-09-02 12:25:04.912699', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "language", "created_at", "title", "code") VALUES ('2011-09-02 12:25:04.931685', NULL, '2011-09-02 12:25:04.931685', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "created_at", "code", "updated_at", "language") VALUES (NULL, '2011-09-02 12:25:06.901897', NULL, '2011-09-02 12:25:06.901897', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("title", "created_at", "code", "updated_at", "language") VALUES (NULL, '2011-09-02 12:25:06.921033', NULL, '2011-09-02 12:25:06.921033', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "code", "created_at", "title", "updated_at") VALUES (NULL, NULL, '2011-09-02 12:25:08.875050', NULL, '2011-09-02 12:25:08.875050')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "code", "created_at", "title", "updated_at") VALUES (NULL, NULL, '2011-09-02 12:25:08.894104', NULL, '2011-09-02 12:25:08.894104')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "snippets" ("updated_at", "code", "language", "created_at", "title") VALUES ('2011-09-02 12:25:10.852775', NULL, NULL, '2011-09-02 12:25:10.852775', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "code", "language", "created_at", "title") VALUES ('2011-09-02 12:25:10.872022', NULL, NULL, '2011-09-02 12:25:10.872022', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "created_at", "language", "title", "updated_at") VALUES (NULL, '2011-09-02 12:25:12.823819', NULL, NULL, '2011-09-02 12:25:12.823819')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "created_at", "language", "title", "updated_at") VALUES (NULL, '2011-09-02 12:25:12.842797', NULL, NULL, '2011-09-02 12:25:12.842797')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "title", "code", "created_at") VALUES (NULL, '2011-09-02 12:25:14.801995', NULL, NULL, '2011-09-02 12:25:14.801995')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "title", "code", "created_at") VALUES (NULL, '2011-09-02 12:25:14.821027', NULL, NULL, '2011-09-02 12:25:14.821027')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "snippets" ("updated_at", "code", "title", "language", "created_at") VALUES ('2011-09-02 12:25:16.806033', NULL, NULL, NULL, '2011-09-02 12:25:16.806033')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "code", "title", "language", "created_at") VALUES ('2011-09-02 12:25:16.825290', NULL, NULL, NULL, '2011-09-02 12:25:16.825290')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "created_at", "updated_at", "title", "language") VALUES (NULL, '2011-09-02 12:25:18.838101', '2011-09-02 12:25:18.838101', NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "created_at", "updated_at", "title", "language") VALUES (NULL, '2011-09-02 12:25:18.857643', '2011-09-02 12:25:18.857643', NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "language", "updated_at", "title", "created_at") VALUES (NULL, NULL, '2011-09-02 12:25:20.816229', NULL, '2011-09-02 12:25:20.816229')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "language", "updated_at", "title", "created_at") VALUES (NULL, NULL, '2011-09-02 12:25:20.835350', NULL, '2011-09-02 12:25:20.835350')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "title", "created_at", "code") VALUES (NULL, '2011-09-02 12:25:22.837539', NULL, '2011-09-02 12:25:22.837539', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "title", "created_at", "code") VALUES (NULL, '2011-09-02 12:25:22.856971', NULL, '2011-09-02 12:25:22.856971', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "updated_at", "title", "language", "created_at") VALUES (NULL, '2011-09-02 12:25:24.859298', NULL, NULL, '2011-09-02 12:25:24.859298')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "updated_at", "title", "language", "created_at") VALUES (NULL, '2011-09-02 12:25:24.878326', NULL, NULL, '2011-09-02 12:25:24.878326')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("code", "language", "created_at", "updated_at", "title") VALUES (NULL, NULL, '2011-09-02 12:25:26.881829', '2011-09-02 12:25:26.881829', NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("code", "language", "created_at", "updated_at", "title") VALUES (NULL, NULL, '2011-09-02 12:25:26.900987', '2011-09-02 12:25:26.900987', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("updated_at", "created_at", "language", "title", "code") VALUES ('2011-09-02 12:25:28.879798', '2011-09-02 12:25:28.879798', NULL, NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("updated_at", "created_at", "language", "title", "code") VALUES ('2011-09-02 12:25:28.898838', '2011-09-02 12:25:28.898838', NULL, NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "created_at", "title", "updated_at", "code") VALUES (NULL, '2011-09-02 12:25:30.876819', NULL, '2011-09-02 12:25:30.876819', NULL)
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "snippets" ("language", "created_at", "title", "updated_at", "code") VALUES (NULL, '2011-09-02 12:25:30.896213', NULL, '2011-09-02 12:25:30.896213', NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("language", "updated_at", "code", "title", "created_at") VALUES (NULL, '2011-09-02 12:25:32.881451', NULL, NULL, '2011-09-02 12:25:32.881451')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("language", "updated_at", "code", "title", "created_at") VALUES (NULL, '2011-09-02 12:25:32.900534', NULL, NULL, '2011-09-02 12:25:32.900534')[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("created_at", "updated_at", "code", "language", "title") VALUES ('2011-09-02 12:25:34.880986', '2011-09-02 12:25:34.880986', NULL, NULL, NULL)
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "snippets" ("created_at", "updated_at", "code", "language", "title") VALUES ('2011-09-02 12:25:34.900153', '2011-09-02 12:25:34.900153', NULL, NULL, NULL)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "snippets" ("code", "created_at", "title", "updated_at", "language") VALUES (NULL, '2011-09-02 12:26:31.208425', 'teste', '2011-09-02 12:26:31.208425', NULL)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "snippets" ("title", "updated_at", "created_at", "language", "code") VALUES ('teste', '2011-09-02 12:26:33.200875', '2011-09-02 12:26:33.200875', NULL, NULL)

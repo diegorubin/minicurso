@@ -1,0 +1,25 @@
+<%= form_for(@snippet) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :code %>
+  </p>
+  <p>
+    <%= f.text_area :code %>
+  </p>
+  
+  <p>
+    <%= f.label :language %>
+    <%= f.text_field :language %>
+  </p>
+
+  <p>
+    <%= f.submit "seila" %>
+  </p>
+
+<% end %>
+
